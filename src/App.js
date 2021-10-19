@@ -24,7 +24,7 @@ function App() {
         <li>
           <input 
             type="text"
-            value="{newItem}"
+            value={newItem}
             onChange={(event) = setNewItem(event.target.value)} 
           />
 
