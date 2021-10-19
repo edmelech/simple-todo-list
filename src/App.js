@@ -4,7 +4,8 @@ import './App.css';
 
 
 function App() {
-  const [items, setItems] = useState(['Learn React, Play Guitar, Party'])
+  const [items, setItems] = useState(['Learn React', 'Play Guitar', 'Party'])
+  const [newItem, setNewItem] = useState('')
 
   return (
    <div className="App">
@@ -15,6 +16,13 @@ function App() {
           <li>{ item }</li>
         )   
       }
+
+      <li>
+        <input 
+          type="text"
+          value="{newItem}"
+          onChange={(event) = setNewItem(event.target.value)} />
+      </li>
      </ul>
    </div>
   );
