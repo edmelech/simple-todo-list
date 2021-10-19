@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import './App.css';
 
 
@@ -17,7 +17,7 @@ function App() {
      <ul>
        {
           items.map((item, index) => 
-            <li>{ item }</li>
+            <li key={`${item}${index}`}>{ item }</li>
           )   
         }
 
@@ -25,7 +25,7 @@ function App() {
           <input 
             type="text"
             value={newItem}
-            onChange={(event) = setNewItem(event.target.value)} 
+            onChange={(event) => setNewItem(event.target.value)} 
           />
 
           <button onClick={() => addItem(newItem)}>
